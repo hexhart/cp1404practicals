@@ -10,7 +10,7 @@ MINIMUM_LENGTH = 6
 def main():
     print("Minimum password length is 6 characters")
     password = get_password()
-    print("*" * len(password))
+    print_password_asterisk(password)
 
 
 def get_password():
@@ -19,6 +19,10 @@ def get_password():
         print(f"Password did not meet the minimum {MINIMUM_LENGTH} character requirements")
         password = input("Enter a password: ")
     return password
+
+
+def print_password_asterisk(password):
+    print("*" * len(password))
 
 
 main()
