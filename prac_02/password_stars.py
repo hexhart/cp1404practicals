@@ -6,12 +6,19 @@ By Hexon Hartley Jimenez
 
 MINIMUM_LENGTH = 6
 
-print("Minimum password length is 6 characters")
-password = input("Enter a password: ")
-while len(password) < MINIMUM_LENGTH:
-    print(f"Password did not meet the minimum {MINIMUM_LENGTH} character requirements")
-    password = input("Enter a password: ")
 
-if len(password) >= MINIMUM_LENGTH:
+def main():
+    print("Minimum password length is 6 characters")
+    password = get_password()
     print("*" * len(password))
 
+
+def get_password():
+    password = input("Enter a password: ")
+    while len(password) < MINIMUM_LENGTH:
+        print(f"Password did not meet the minimum {MINIMUM_LENGTH} character requirements")
+        password = input("Enter a password: ")
+    return password
+
+
+main()
