@@ -1,5 +1,6 @@
 """
-Password checking program for Prac 2 of Week 2
+CP1404/CP5632 - Practical 2
+Password checking program
 By Hexon Hartley Jimenez
 """
 # Mr.Lindsay, May I know if my coding is correct? Any tips how to improve my code?

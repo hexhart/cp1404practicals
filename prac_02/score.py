@@ -1,6 +1,6 @@
 """
-CP1404/CP5632 - Practical
-Program that determines score status
+CP1404/CP5632 - Practical 2
+Updated Program that determines score status
 By Hexon Hartley Jimenez
 """
 import random

@@ -4,10 +4,11 @@ A Simple Menu Program
 By Hexon Hartley Jimenez
 """
 
-name = input("Enter name: ")
 MENU = """(H)ello
 (G)oodbye
 (Q)uit"""
+
+name = input("Enter name: ")
 print(MENU)
 choice = input(">>> ").upper()
 while choice != "Q":

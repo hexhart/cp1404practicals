@@ -1,6 +1,6 @@
 """
-CP1404/CP5632 - Practical
-Temperature conversion program
+CP1404/CP5632 - Practical 2
+Updated Temperature conversion program
 By Hexon Hartley Jimenez
 """
 
