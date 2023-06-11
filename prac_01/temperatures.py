@@ -1,5 +1,5 @@
 """
-CP1404/CP5632 - Practical
+CP1404/CP5632 - Practical 2
 Temperature conversion program
 By Hexon Hartley Jimenez
 """
