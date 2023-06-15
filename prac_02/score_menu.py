@@ -13,7 +13,7 @@ MENU = """
 
 
 def main():
-    score = -1  # To initialize invalid score upon selecting P first, when no valid input is entered
+    score = get_valid_score()  # To initialize initial score
     print(MENU)
     choice = input(">>> ").upper()
     while choice != "Q":
@@ -54,15 +54,12 @@ def determine_score(score):
 
 def print_score_result(score):
     score_result = determine_score(score)
-    print(f"Score result: {score_result}")
+    print(f"Score: {score} is {score_result}")
 
 
 def print_star(score):
-    if score < 0 or score > 100:
-        print("Invalid score, enter a valid number first!")
-    else:
-        star_count = "*" * score
-        print(f"{star_count}")
+    star_count = "*" * score
+    print(f"{star_count}")
 
 
 main()
