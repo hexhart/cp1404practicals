@@ -9,7 +9,7 @@ MINIMUM_LENGTH = 6
 
 
 def main():
-    print("Minimum password length is 6 characters")
+    print(f"Minimum password length is {MINIMUM_LENGTH} characters")
     password = get_password()
     print_password_asterisk(password)
 
