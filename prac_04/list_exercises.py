@@ -1,5 +1,5 @@
 """
-CP1404/CP5632 Practical 4 By Hexon Hartley Jimenez
+CP1404/CP5632 - Practical 4 By Hexon Hartley Jimenez
 List Exercises program
 """
 

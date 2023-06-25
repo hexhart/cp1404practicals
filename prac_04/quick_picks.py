@@ -1,5 +1,5 @@
 """
-CP1404/CP5632 Practical By Hexon Hartley Jimenez
+CP1404/CP5632 - Practical 4 By Hexon Hartley Jimenez
 "Quick Pick" Lottery Ticket Generator program
 """
 import random
