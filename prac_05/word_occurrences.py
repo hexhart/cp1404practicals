@@ -1,6 +1,8 @@
 """
 CP1404/CP5632 Practical 5 By Hexon Hartley Jimenez
 Word Occurrences program
+Estimated: 20 minutes
+Actual: 56 minutes
 """
 
 word_to_count = {}
@@ -9,7 +11,7 @@ words = text.split()  # each sentence is split into different words
 
 # Count frequency of occurring words
 for word in words:
-    word_count = word_to_count.get(word, 0)  # non-existent word is added to dict, count = 1
+    word_count = word_to_count.get(word, 0)  # non-existent word is added to dict, initial count 1
     word_to_count[word] = word_count + 1  # word is an existing key in dict, count increment by 1
 
 # Sorting the words (key) in ascending order
