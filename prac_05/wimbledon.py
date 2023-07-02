@@ -2,7 +2,7 @@
 CP1404/CP5632 Practical 5 By Hexon Hartley Jimenez
 Wimbledon - Game, Set, Match program
 Estimated: 30 minutes
-Actual: 1 hour 3 minutes
+Actual: 1 hour 4 minutes
 """
 FILENAME = "wimbledon.csv"
 INDEX_COUNTRY = 1

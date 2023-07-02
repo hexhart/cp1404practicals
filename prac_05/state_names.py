@@ -2,6 +2,8 @@
 CP1404/CP5632 Practical 5 By Hexon Hartley Jimenez
 State names in a dictionary
 File needs reformatting
+Estimated: 20 minutes
+Actual: 45 minutes
 """
 
 CODE_TO_NAME = {"QLD": "Queensland", "NSW": "New South Wales", "NT": "Northern Territory", "WA": "Western Australia",

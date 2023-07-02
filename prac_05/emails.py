@@ -5,7 +5,7 @@ This program that stores users' emails (unique keys) and names (values) in a dic
 Ask the user for their email until they enter a blank one which ends the program.
 Has a function to extract name from the email and print after blank is entered from Email user input.
 Estimated: 30 minutes
-Actual: 48 minutes
+Actual: 45 minutes
 """
 
 
