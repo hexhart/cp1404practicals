@@ -6,7 +6,7 @@ Actual: 56 minutes
 """
 
 word_to_count = {}
-text = input("Text: ")  # ask user for string input (random sentences)
+text = input("Text: ")  # prompt user for string input (random sentences)
 words = text.split()  # each sentence is split into different words
 
 # Count frequency of occurring words
