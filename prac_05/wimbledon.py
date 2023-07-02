@@ -27,7 +27,7 @@ def get_records(filename):
 
 
 def process_records(records):
-    champion_to_count = {}  # sets a dictionary for champion's count
+    champion_to_count = {}  # new dictionary for champion's count
     countries = set()
     for score in records:
         countries.add(score[INDEX_COUNTRY])
