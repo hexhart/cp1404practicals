@@ -29,6 +29,9 @@ def test_guitar_methods():
     print(f"{other.name} is_vintage() - Expected {False}. Got {other.is_vintage()}")
     print()
 
+    # Test is_vintage() with different f-string
+    print(f"{guitar.get_age()}-year old guitar is_vintage() - Expected {True}. Got {guitar.is_vintage()}")
+
 
 if __name__ == '__main__':
     test_guitar_methods()
