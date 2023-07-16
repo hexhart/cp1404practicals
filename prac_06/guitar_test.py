@@ -24,6 +24,11 @@ def test_guitar_methods():
     print(f"{other.name} get_age() - Expected {11}. Got {other.get_age()}")
     print()
 
+    # Test is_vintage()
+    print(f"{guitar.name} is_vintage() - Expected {True}. Got {guitar.is_vintage()}")
+    print(f"{other.name} is_vintage() - Expected {False}. Got {other.is_vintage()}")
+    print()
+
 
 if __name__ == '__main__':
     test_guitar_methods()
