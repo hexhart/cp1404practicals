@@ -42,6 +42,7 @@ def load_projects(filename):
 
 
 def display_projects(projects):
+    """Displays the list of incomplete and completed projects"""
     incomplete_projects = [project for project in projects if project.percent_complete < 100]
     completed_projects = [project for project in projects if project.percent_complete == 100]
 
@@ -54,6 +55,29 @@ def display_projects(projects):
     print("Completed projects:")
     for project in completed_projects:
         print(f"  {project}")
+
+
+def update_project(projects):
+    for i, project in enumerate(projects):
+        print(f"{i}: {project}")
+
+    try:
+        project_index = int(input("Project choice: "))
+        if 0 <= project_index < len(projects):
+            project = projects[project_index]
+            percent_complete_str = input("New Percentage: ")
+            priority_str = input("New Priority (leave blank to retain existing value): ")
+
+            if percent_complete_str:
+                project.percent_complete = int(percent_complete_str)
+            if priority_str:
+                project.priority = int(priority_str)
+
+            print("Project updated successfully.")
+        else:
+            print("Invalid project choice.")
+    except ValueError:
+        print("Invalid input. Project not updated.")
 
 
 def main():
@@ -79,7 +103,7 @@ def main():
         elif choice == "A":
             pass
         elif choice == "U":
-            pass
+            update_project(projects)
         else:
             print("Invalid menu choice")
         print(MENU)
