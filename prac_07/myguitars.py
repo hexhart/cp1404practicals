@@ -4,34 +4,6 @@ myguitars.py- a program to read all guitars and store them in a list of Guitar o
 """
 
 
-def main():
-    """
-    Reads the guitars file and store them in a list of Guitar objects
-
-    Displays the guitars in a list
-    Displays the guitars in a sorted manner
-    """
-    # Read guitars from file and store them in a list of Guitar objects
-    guitars = read_guitars_from_file('guitars.csv')
-
-    # Display the guitars
-    print("Guitars as they are:")
-    display_guitars(guitars)
-
-    # Sort the guitars by year (oldest to newest)
-    guitars.sort()
-
-    # Display the sorted guitars
-    print("\nGuitars sorted by year (oldest to newest):")
-    display_guitars(guitars)
-
-    # Add new guitars
-    add_new_guitars(guitars)
-
-    # Write all the guitars to the csv file
-    write_guitars_to_file(guitars, 'guitars.csv')
-
-
 # Guitar class definition
 class Guitar:
     """Class representing Guitars"""
@@ -49,6 +21,38 @@ class Guitar:
     def __lt__(self, other):
         """Less than comparison method to sort guitars based on their year"""
         return self.year < other.year
+
+
+def main():
+    """
+    Reads the guitars file and store them in a list of Guitar objects
+
+    Displays the guitars in a list
+    Displays the guitars in a sorted manner
+    """
+    # Read guitars from file and store them in a list of Guitar objects
+    guitars = read_guitars_from_file('guitars.csv')
+
+    # Display the guitars
+    print("List of Guitars:")
+    display_guitars(guitars)
+
+    # Sort the guitars by year (oldest to newest)
+    guitars.sort()
+
+    # Display the sorted guitars
+    print("\nGuitars sorted by year (oldest to newest):")
+    display_guitars(guitars)
+
+    # Add new guitars
+    add_new_guitars(guitars)
+
+    # Write all the guitars to the csv file
+    write_guitars_to_file(guitars, 'guitars.csv')
+
+    # Display updated list of guitars
+    print("\nList of Guitars (with new addition):")
+    display_guitars(guitars)
 
 
 def read_guitars_from_file(filename):
@@ -69,6 +73,7 @@ def display_guitars(guitars):
 
 
 def add_new_guitars(guitars):
+    print("")  # Whitespace separator
     while True:
         name = input("Enter Guitar Name (or leave blank to stop adding): ")
         if name == "":
@@ -80,7 +85,9 @@ def add_new_guitars(guitars):
 
 
 def write_guitars_to_file(guitars, filename):
-    pass
+    with open(filename, 'w') as file:
+        for guitar in guitars:
+            file.write(f"{guitar.name},{guitar.year},{guitar.cost}\n")
 
 
 if __name__ == "__main__":
