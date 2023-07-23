@@ -1,6 +1,8 @@
 """
 CP1404/CP5632 Practical 7 By Hexon Hartley Jimenez
 myguitars.py- a program to read all guitars and store them in a list of Guitar objects
+Estimated: 20 minutes
+Actual: 42 minutes
 """
 
 
