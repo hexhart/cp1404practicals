@@ -25,6 +25,12 @@ def main():
     print("\nGuitars sorted by year (oldest to newest):")
     display_guitars(guitars)
 
+    # Add new guitars
+    add_new_guitars(guitars)
+
+    # Write all the guitars to the csv file
+    write_guitars_to_file(guitars, 'guitars.csv')
+
 
 # Guitar class definition
 class Guitar:
