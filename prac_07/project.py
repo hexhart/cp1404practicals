@@ -1,8 +1,8 @@
 """
 CP1404/CP5632 Practical 7 By Hexon Hartley Jimenez
 Project Class file
-Estimated:
-Actual:
+Estimated: 1 hour 30 minutes
+Actual: 3 hours 35 minutes
 """
 
 
@@ -19,7 +19,8 @@ class Project:
 
     def __str__(self):
         """String representation of constructs"""
-        return f"{self.name}, start: {self.start_date.strftime('%d/%m/%Y')}, priority {self.priority}, " \
+        start_date_str = self.start_date.strftime('%d/%m/%Y')
+        return f"{self.name}, start: {start_date_str}, priority {self.priority}, " \
                f"estimate: ${self.cost_estimate:.2f}, completion: {self.percent_complete}%"
 
     def __lt__(self, other):
