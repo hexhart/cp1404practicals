@@ -68,5 +68,20 @@ def display_guitars(guitars):
         print(guitar)
 
 
+def add_new_guitars(guitars):
+    while True:
+        name = input("Enter Guitar Name (or leave blank to stop adding): ")
+        if name == "":
+            break
+        year = int(input("Enter year of the guitar: "))
+        cost = float(input("Enter cost of the guitar: "))
+        guitar = Guitar(name, year, cost)
+        guitars.append(guitar)
+
+
+def write_guitars_to_file(guitars, filename):
+    pass
+
+
 if __name__ == "__main__":
     main()
