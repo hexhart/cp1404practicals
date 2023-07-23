@@ -80,6 +80,30 @@ def update_project(projects):
         print("Invalid input. Project not updated.")
 
 
+def add_new_project(projects):
+    print("Let's add a new project")
+    name = input("Name: ")
+    start_date_str = input("Start date (dd/mm/yy): ")
+    priority = int(input("Priority: "))
+    cost_estimate = float(input("Cost estimate: $"))
+    completion_percentage = int(input("Percent complete: "))
+
+    try:
+        start_date = datetime.datetime.strptime(start_date_str, "%d/%m/%Y").date()
+        project = Project(name, start_date, priority, cost_estimate, completion_percentage)
+        projects.append(project)
+        print("New project added successfully.")
+    except ValueError:
+        print("Invalid date format. Project not added.")
+
+
+def filter_projects_by_date(projects, date):
+    filtered_projects = [project for project in projects if project.start_date >= date]
+    filtered_projects.sort()
+    for project in filtered_projects:
+        print(f"  {project}")
+
+
 def main():
     """Main function to run project management program"""
     # projects = []
@@ -99,9 +123,11 @@ def main():
         elif choice == "D":
             display_projects(projects)
         elif choice == "F":
-            pass
+            date_str = input("Show projects that start after date (dd/mm/yyyy): ")
+            date = datetime.datetime.strptime(date_str, "%d/%m/%Y").date()
+            filter_projects_by_date(projects, date)
         elif choice == "A":
-            pass
+            add_new_project(projects)
         elif choice == "U":
             update_project(projects)
         else:
