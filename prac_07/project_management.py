@@ -1,8 +1,8 @@
 """
 CP1404/CP5632 Practical 7 By Hexon Hartley Jimenez
 Project Management Client Program
-Estimated:
-Actual:
+Estimated: 1 hour 30 minutes
+Actual: 3 hours 35 minutes
 """
 import datetime
 from prac_07.project import Project
@@ -17,6 +17,7 @@ MENU = """- (L)oad projects
 
 
 def load_projects(filename):
+    """Load projects from the text file and return a list of Project objects."""
     projects = []
     try:
         with open(filename, "r") as file:
@@ -42,7 +43,7 @@ def load_projects(filename):
 
 
 def display_projects(projects):
-    """Displays the list of incomplete and completed projects"""
+    """Displays the list of incomplete and completed projects, sorted by priority."""
     incomplete_projects = [project for project in projects if project.percent_complete < 100]
     completed_projects = [project for project in projects if project.percent_complete == 100]
 
@@ -58,6 +59,7 @@ def display_projects(projects):
 
 
 def update_project(projects):
+    """Update completion percentage and priority of a selected project."""
     for i, project in enumerate(projects):
         print(f"{i}: {project}")
 
@@ -81,6 +83,7 @@ def update_project(projects):
 
 
 def add_new_project(projects):
+    """Add a new project to the list of projects."""
     print("Let's add a new project")
     name = input("Name: ")
     start_date_str = input("Start date (dd/mm/yy): ")
@@ -98,16 +101,25 @@ def add_new_project(projects):
 
 
 def filter_projects_by_date(projects, date):
+    """Filter projects that start after the given date and display them, sorted by date."""
     filtered_projects = [project for project in projects if project.start_date >= date]
     filtered_projects.sort()
     for project in filtered_projects:
         print(f"  {project}")
 
 
+def save_projects(filename, projects):
+    """Saves the list of projects to the text file."""
+    with open(filename, "w") as file:
+        file.write(
+            "Name\tStart Date\tPriority\tCost Estimate\tCompletion Percentage\n")  # writes the first line of the file
+        for project in projects:
+            file.write(f"{project.name}\t{project.start_date.strftime('%d/%m/%Y')}\t{project.priority}\t"
+                       f"{project.cost_estimate:.2f}\t{project.percent_complete}\n")
+
+
 def main():
     """Main function to run project management program"""
-    # projects = []
-
     filename = "project.txt"
     projects = load_projects(filename)
 
@@ -119,7 +131,8 @@ def main():
             filename = input("Enter the filename to load projects from: ")
             projects = load_projects(filename)
         elif choice == "S":
-            pass
+            filename = input("Enter the filename to save projects to: ")
+            save_projects(filename, projects)
         elif choice == "D":
             display_projects(projects)
         elif choice == "F":
@@ -134,7 +147,6 @@ def main():
             print("Invalid menu choice")
         print(MENU)
         choice = input(">>> ").upper()
-
     print("Thank you for using custom-built project management software.")
 
 
