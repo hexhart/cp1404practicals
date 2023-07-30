@@ -3,6 +3,7 @@ BoxLayout:
     BoxLayout:
         orientation: 'horizontal'
         TextInput:
+            id: input_distance
             text: '4.1'
             font_size: 40
         BoxLayout:
@@ -17,7 +18,9 @@ BoxLayout:
     Button:
         text: 'Convert miles to km'
         font_size: 35
+        on_press: app.handle_calculation()
     Label:
+        id: output_label
         font_size: 48
         text: '54.717'
         color: (1, 1, 0, 1)
