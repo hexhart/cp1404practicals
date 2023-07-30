@@ -1,8 +1,8 @@
 """
 CP1404/CP5632 Practical 8 By Hexon Hartley Jimenez
-Modifying Existing GUI Program - box_layout_demo.py
-Estimated Time: 30 minutes
-Actual Time: 25 minutes
+Miles to Kilometres Converter
+Estimated Time:
+Actual Time:
 """
 from kivy.app import App
 from kivy.lang import Builder
