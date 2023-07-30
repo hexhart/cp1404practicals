@@ -33,8 +33,9 @@ class DistanceConverterApp(App):
         """
         Handles the buttons up and down upon button press
         """
-        # self.output_value = self.root.ids.input_distance.text
-        pass
+        value = self.get_valid_miles() + update
+        self.root.ids.input_distance.text = str(value)
+        self.handle_calculation()
 
     def handle_calculation(self):
         """
