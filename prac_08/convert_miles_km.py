@@ -20,7 +20,7 @@ class DistanceConverterApp(App):
 
     def build(self):
         """
-        Build the Kivy app from the kv file
+        Build the Kivy app GUI from the kv file
         """
         Window.size = (750, 450)
         self.title = "Miles to Kilometres Converter"
