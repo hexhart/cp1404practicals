@@ -8,7 +8,6 @@ from kivy.app import App
 from kivy.lang import Builder
 from kivy.core.window import Window
 from kivy.uix.label import Label
-
 # from kivy.properties import StringProperty
 
 __author__ = 'Hexon Hartley Jimenez'
