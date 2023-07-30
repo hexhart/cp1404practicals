@@ -1,5 +1,5 @@
 """
-CP1404/CP5632 Practical 7 By Hexon Hartley Jimenez
+CP1404/CP5632 Practical 8 By Hexon Hartley Jimenez
 Kivy GUI program to square a number
 Estimated Time: 30 minutes
 Actual Time: 28 minutes
