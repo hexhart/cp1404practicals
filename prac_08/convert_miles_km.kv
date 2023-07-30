@@ -12,9 +12,11 @@ BoxLayout:
             Button:
                 text: 'Up'
                 font_size: 35
+                on_press: app.handle_increment(1)
             Button:
                 text: 'Down'
                 font_size: 35
+                on_press: app.handle_increment(2)
     Button:
         text: 'Convert miles to km'
         font_size: 35
@@ -22,5 +24,5 @@ BoxLayout:
     Label:
         id: output_label
         font_size: 48
-        text: '54.717'
+        text: 'Enter a value in the text field to convert'
         color: (1, 1, 0, 1)
