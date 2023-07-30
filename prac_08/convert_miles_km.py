@@ -1,13 +1,12 @@
 """
 CP1404/CP5632 Practical 8 By Hexon Hartley Jimenez
 Miles to Kilometres Converter
-Estimated Time:
-Actual Time:
+Estimated Time: 30 Minutes
+Actual Time: 37 Minutes
 """
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.core.window import Window
-# from kivy.properties import StringProperty
 
 __author__ = 'Hexon Hartley Jimenez'
 
@@ -18,7 +17,6 @@ class DistanceConverterApp(App):
     """
     DistanceConverterApp is a program that converts miles to kilometres
     """
-    # output_value = StringProperty()
 
     def build(self):
         """
