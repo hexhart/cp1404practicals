@@ -1,8 +1,8 @@
 """
 CP1404/CP5632 Practical 9 By Hexon Hartley Jimenez
 Car class extension
-Estimated:
-Actual:
+Estimated: 45 minutes
+Actual: 15 minutes
 """
 
 
