@@ -10,7 +10,7 @@ from taxi import Taxi
 
 def main():
     # Create my_taxi object, with name, fuel and price
-    my_taxi = Taxi("Prius 1", 100, 1.23)
+    my_taxi = Taxi("Prius 1", 100)
 
     # Drive the taxi at 40km
     my_taxi.drive(40)
