@@ -8,6 +8,7 @@ from prac_09.taxi import Taxi
 
 
 def main():
+    """Test the Tax class"""
     # Create my_taxi object, with name, fuel and price
     my_taxi = Taxi("Prius 1", 100)
 
