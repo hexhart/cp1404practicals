@@ -4,8 +4,7 @@ Taxi test program to test Taxi class
 Estimated: 45 minutes
 Actual: 15 minutes
 """
-# from prac_09 import taxi
-from taxi import Taxi
+from prac_09.taxi import Taxi
 
 
 def main():
