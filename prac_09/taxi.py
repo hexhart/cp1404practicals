@@ -2,7 +2,7 @@
 CP1404/CP5632 Practical 9 By Hexon Hartley Jimenez
 Taxi class file
 Estimated: 45 minutes
-Actual: 15 minutes
+Actual:  minutes
 """
 from prac_09.car import Car
 
@@ -10,11 +10,14 @@ from prac_09.car import Car
 class Taxi(Car):
     """Specialised version of a Car that includes fare costs."""
 
-    def __init__(self, name, fuel, price_per_km):
+    # Class variable price_per_km set to 1.23
+    price_per_km = 1.23
+
+    def __init__(self, name, fuel):
         """Initialise a Taxi instance, based on parent class Car."""
         super().__init__(name, fuel)
-        self.price_per_km = price_per_km
         self.current_fare_distance = 0
+        # Removal of self.price_per_km = price_per_km
 
     def __str__(self):
         """Return a string like a Car but with current fare distance."""
