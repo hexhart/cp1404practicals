@@ -15,10 +15,10 @@ def main():
     bad_car = UnreliableCar("Recycled Car", 100, 30)
 
     # test drive cars
-    for i in range(1, 10):
-        print(f"Drive test car at a distance {i:2}km:")
-        print(f"{good_car.name:12} drove {good_car.drive(i):2}km")
-        print(f"{bad_car.name:12} drove {bad_car.drive(i):2}km\n")
+    for distance in range(1, 10):
+        print(f"Drive test car at a distance {distance:2}km:")
+        print(f"{good_car.name:12} drove {good_car.drive(distance):2}km")
+        print(f"{bad_car.name:12} drove {bad_car.drive(distance):2}km\n")
 
     # print drive test result
     print(f"\n{good_car.name}, reliability: {good_car.reliability}%")
