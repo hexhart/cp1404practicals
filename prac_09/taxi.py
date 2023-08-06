@@ -8,13 +8,13 @@ from prac_09.car import Car
 
 
 class Taxi(Car):
-    """Specialised version of a Car that includes fare costs."""
+    """Specialized version of a Car that includes fare costs."""
 
     # Class variable price_per_km set to 1.23
     price_per_km = 1.23
 
     def __init__(self, name, fuel):
-        """Initialise a Taxi instance, based on parent class Car."""
+        """Initialize a Taxi instance, based on parent class Car."""
         super().__init__(name, fuel)
         self.current_fare_distance = 0
         # Removal of self.price_per_km = price_per_km
